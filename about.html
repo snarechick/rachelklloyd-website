@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Rachel K. Lloyd, CPA, CITP</title>
+  <meta name="description" content="Learn about Rachel K. Lloyd — a CPA and CITP with over a decade of experience bridging accounting and technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #07a2be;
+      --accent-light: #e3f5f9;
+      --accent-mid: #7dcbdb;
+      --accent-dark: #055f70;
+      --bg: #fafaf8;
+      --bg-white: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a;
+      --text-tertiary: #9a9a9a;
+      --border: #e8e8e4;
+      --font-body: 'DM Sans', sans-serif;
+      --font-display: 'Lora', serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 4px 0;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-dark);
+      border-bottom-color: var(--accent);
+    }
+
+    /* About content */
+    .about-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+    }
+
+    .page-eyebrow {
+      font-size: 12px;
+      color: var(--accent-dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-title {
+      font-family: var(--font-display);
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 2.5rem;
+    }
+
+    .bio {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      border-left: 2px solid var(--accent);
+      padding-left: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .bio p {
+      margin-bottom: 1.25rem;
+    }
+
+    .bio p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Skills */
+    .skills-section {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: var(--accent-light);
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 24px;
+    }
+
+    /* CTA */
+    .about-cta {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .about-cta p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-cta a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .about-cta a:hover {
+      background: var(--accent-dark);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      background: var(--bg-white);
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 700px) {
+      .nav {
+        padding: 1rem 1.25rem;
+      }
+
+      .nav-logo {
+        font-size: 15px;
+      }
+
+      .nav-links {
+        gap: 1.25rem;
+      }
+
+      .nav-link {
+        font-size: 13px;
+      }
+
+      .about-section {
+        padding: 2.5rem 1.25rem;
+      }
+
+      .page-title {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Rachel K. Lloyd, CPA, CITP</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="about-section">
+      <div class="page-eyebrow">About me</div>
+      <h1 class="page-title">Background &amp; expertise</h1>
+
+      <div class="bio">
+        <p>Rachel K. Lloyd, CPA, CITP, is a Certified Public Accountant and Certified Information Technology Professional with over a decade of experience in tax compliance and planning. Her CITP designation — an exam-based certification exclusively available to licensed CPAs — reflects her deep commitment to the intersection of accounting and technology.</p>
+        <p>She works at the crossroads of these two disciplines, helping translate complex financial and technical concepts into clear, actionable language that people can actually use.</p>
+        <p>Known for her data-driven approach and personable style, Rachel builds trusted relationships with clients and colleagues alike — bringing both analytical precision and genuine warmth to every engagement.</p>
+        <p>She is passionate about the evolving role of technology in modern accounting and the difference that clear communication can make in an increasingly complex world.</p>
+      </div>
+
+      <div class="skills-section">
+        <div class="section-label">Areas of expertise</div>
+        <div class="skills-grid">
+          <span class="skill-tag">Tax compliance</span>
+          <span class="skill-tag">Tax planning</span>
+          <span class="skill-tag">Financial analysis</span>
+          <span class="skill-tag">Data-driven decisions</span>
+          <span class="skill-tag">Accounting technology</span>
+          <span class="skill-tag">Plain language communication</span>
+          <span class="skill-tag">Client relationships</span>
+          <span class="skill-tag">Information technology (CITP)</span>
+        </div>
+      </div>
+
+      <div class="about-cta">
+        <p>Interested in connecting? I'd love to hear from you.</p>
+        <a href="contact.html">Get in touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">&copy; 2026 Rachel K. Lloyd, CPA, CITP &middot; rachelklloyd.me</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rachel K. Lloyd, CPA, CITP — Accounting &amp; Technology</title>
+  <meta name="description" content="Rachel K. Lloyd is a Certified Public Accountant and Certified Information Technology Professional bridging accounting and technology with clarity and warmth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #07a2be;
+      --accent-light: #e3f5f9;
+      --accent-mid: #7dcbdb;
+      --accent-dark: #055f70;
+      --bg: #fafaf8;
+      --bg-white: #ffffff;
+      --text-primary: #1a1a1a;
+      --text-secondary: #5a5a5a;
+      --text-tertiary: #9a9a9a;
+      --border: #e8e8e4;
+      --font-body: 'DM Sans', sans-serif;
+      --font-display: 'Lora', serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 4px 0;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-dark);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 4rem;
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 12px;
+      color: var(--accent-dark);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-tagline {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 440px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .hero-cta:hover {
+      background: var(--accent-dark);
+    }
+
+    .hero-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      border: 2px solid var(--accent-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-photo-initials {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 500;
+      color: var(--accent-dark);
+    }
+
+    /* Highlights */
+    .highlights-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2.5rem 4rem;
+    }
+
+    .highlights-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .highlight-card {
+      background: var(--bg-white);
+      border-radius: 10px;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .highlight-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .highlight-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .highlight-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      background: var(--bg-white);
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 700px) {
+      .nav {
+        padding: 1rem 1.25rem;
+      }
+
+      .nav-logo {
+        font-size: 15px;
+      }
+
+      .nav-links {
+        gap: 1.25rem;
+      }
+
+      .nav-link {
+        font-size: 13px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 3rem 1.25rem 2.5rem;
+        gap: 2rem;
+      }
+
+      .hero-tagline {
+        max-width: 100%;
+      }
+
+      .hero-photo {
+        width: 140px;
+        height: 140px;
+      }
+
+      .highlights-section {
+        padding: 0 1.25rem 3rem;
+      }
+
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Rachel K. Lloyd, CPA, CITP</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Accounting &amp; Technology · CPA · CITP</div>
+        <h1 class="hero-name">Rachel K. Lloyd</h1>
+        <p class="hero-tagline">Where accounting expertise meets technology — delivered in language anyone can understand.</p>
+        <a href="contact.html" class="hero-cta">Get in touch</a>
+      </div>
+      <div class="hero-photo">
+        <img src="headshot.jpg" alt="Rachel K. Lloyd, CPA, CITP">
+      </div>
+    </section>
+
+    <section class="highlights-section">
+      <hr class="highlights-divider">
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h2 class="highlight-title">Data-driven decisions</h2>
+          <p class="highlight-desc">Turning complex financial data into clear, actionable insight.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h2 class="highlight-title">Plain language first</h2>
+          <p class="highlight-desc">Complex concepts explained clearly, without the jargon.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h2 class="highlight-title">Tax &amp; compliance</h2>
+          <p class="highlight-desc">Over a decade of CPA and CITP expertise in tax planning and compliance.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">&copy; 2026 Rachel K. Lloyd, CPA, CITP &middot; rachelklloyd.me</p>
+  </footer>
+
+</body>
+</html>
